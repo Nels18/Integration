@@ -1,0 +1,14 @@
+/****** My stylesheet ******/
+
+img {
+    border-radius: 3px;
+}
+
+img:hover {
+    opacity: .5;
+}
+
+img:first-of-type {
+    outline: 2px red solid;
+    filter: grayscale(1);
+}
