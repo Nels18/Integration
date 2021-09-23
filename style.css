@@ -42,7 +42,7 @@ button, input[type="submit"] {
     padding: .5rem;
 }
 
-button:not(button:last-of-type) {
+button:not(:last-of-type) {
     margin-right: 1em;
 }
 
@@ -137,7 +137,7 @@ nav li {
 
 /*** Contact ***/
 
-.contact-section input:not(input[type="submit"]), .contact-section textarea {
+.contact-section input:not([type="submit"]), .contact-section textarea {
     width: 100%;
 }
 
@@ -190,7 +190,7 @@ footer {
 
     /*** Contact ***/
 
-    .contact-section input:not(input[type="submit"]) {
+    .contact-section input:not([type="submit"]) {
         width: 40%;
     }
 
