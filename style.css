@@ -1,4 +1,7 @@
 /****** My stylesheet ******/
+body *{
+    box-sizing: border-box;
+}
 
 img {
     border-radius: 3px;
@@ -8,7 +11,32 @@ img:hover {
     opacity: .5;
 }
 
-img:first-of-type {
-    outline: 2px red solid;
+header img:first-of-type {
     filter: grayscale(1);
+    width: 100%;
+}
+
+nav {
+    padding: 1em;
+    text-align: center;
+}
+
+nav > p + ul {
+    display: none;
+    padding: 10px;
+} 
+
+nav > p:hover + ul {
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    background-color: rgba(200, 200, 200, .5);
+    z-index: 100;
+} 
+
+nav li {
+    list-style: none;
+    margin-bottom: 10px;
 }
