@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portefolio d'un développeur web">
+    <link rel="stylesheet" href="style.css">
     <title>Mon Portefolio</title>
 </head>
 <body>
     <main>
-        <h1>Mon Portefolio</h1>
         <nav>
             <ul>
                 <li><a href="#projects" title="Mes différents projets réalisés">Projets</a></li>
@@ -19,34 +19,37 @@
             </ul>
         </nav> 
         <header>
-            <img src="https://via.placeholder.com/1200x500" alt="ceci est un placeholder">
+            <h1>Mon Portefolio</h1>
+            <img src="https://source.unsplash.com/random" alt="ceci est une image aléatoire">
             <p>Nelson Belgarde</p>
         </header>
-        <section id="projects">
+        <section class="projects-section" id="projects">
             <h2>Projets réalisés</h2>
-            <article>
-                <img src="https://via.placeholder.com/150" alt="ceci est un placeholder">
-                <h3>Projet 1</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores et eum provident quo rem repellendus tempora facilis architecto cum nam adipisci vel assumenda, eveniet fugiat aperiam saepe debitis.</p>
-                <button>En savoir plus</button>
-            </article>
-            <article>
-                <img src="https://via.placeholder.com/150" alt="ceci est un placeholder">
-                <h3>Projet 2</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores et eum provident quo rem repellendus tempora facilis architecto cum nam adipisci vel assumenda, eveniet fugiat aperiam saepe debitis.</p>
-                <button>En savoir plus</button>
-            </article>
-            <article>
-                <img src="https://via.placeholder.com/150" alt="ceci est un placeholder">
-                <h3>Projet 3</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores et eum provident quo rem repellendus tempora facilis architecto cum nam adipisci vel assumenda, eveniet fugiat aperiam saepe debitis.</p>
-                <button>En savoir plus</button>
-            </article>
+           <div class="projects-articles">
+                <article>
+                    <img src="https://via.placeholder.com/150" alt="ceci est un placeholder">
+                    <h3>Projet 1</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores et eum provident quo rem repellendus tempora facilis architecto cum nam adipisci vel assumenda, eveniet fugiat aperiam saepe debitis.</p>
+                    <button>En savoir plus</button>
+                </article>
+                <article>
+                    <img src="https://via.placeholder.com/150" alt="ceci est un placeholder">
+                    <h3>Projet 2</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores et eum provident quo rem repellendus tempora facilis architecto cum nam adipisci vel assumenda, eveniet fugiat aperiam saepe debitis.</p>
+                    <button>En savoir plus</button>
+                </article>
+                <article>
+                    <img src="https://via.placeholder.com/150" alt="ceci est un placeholder">
+                    <h3>Projet 3</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores et eum provident quo rem repellendus tempora facilis architecto cum nam adipisci vel assumenda, eveniet fugiat aperiam saepe debitis.</p>
+                    <button>En savoir plus</button>
+                </article>
+           </div>
         </section>
-        <section id="education">
+        <section class="education-section" id="education">
             <h2>Études</h2>
-            <img src="https://via.placeholder.com/200" alt="ceci est un placeholder">
-            <div>
+            <div class="my-informations">
+                <img src="https://via.placeholder.com/200" alt="ceci est un placeholder">
                 <ul>
                     <li>Nom</li>
                     <li>Prénom</li>
@@ -73,26 +76,32 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos dolorem voluptatum dolorum animi? Qui quam minus ut, nam animi unde. Voluptatum officiis ullam voluptates magnam at ratione deleniti id! Dolore?</p>
             </div>
         </section>
-        <section id="articles">
+        <section class="articles-section" id="articles">
             <h2>Articles</h2>
-            <article>
-                <img src="https://via.placeholder.com/150" alt="ceci est un placeholder">
-                <h3>Article 1</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos nulla inventore quos officia eveniet doloribus deleniti! Neque laborum ducimus veniam, nostrum eveniet odit! Ad laborum obcaecati unde dolorem molestias voluptatum.</p>
-                <button>Lire</button>
-                <button>33 Commentaires</button>
-            </article>
-            <article>
-                <img src="https://via.placeholder.com/150" alt="ceci est un placeholder">
-                <h3>Article 2</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos nulla inventore quos officia eveniet doloribus deleniti! Neque laborum ducimus veniam, nostrum eveniet odit! Ad laborum obcaecati unde dolorem molestias voluptatum.</p>
-                <button>Lire</button>
-                <button>33 Commentaires</button>
-            </article>
+            <div class="articles-container">
+                <article>
+                    <img src="https://via.placeholder.com/150" alt="ceci est un placeholder">
+                    <h3>Article 1</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos nulla inventore quos officia eveniet doloribus deleniti! Neque laborum ducimus veniam, nostrum eveniet odit! Ad laborum obcaecati unde dolorem molestias voluptatum.</p>
+                    <div class="articles-buttons">
+                        <button>Lire</button>
+                        <button>33 Commentaires</button>
+                    </div>
+                </article>
+                <article>
+                    <img src="https://via.placeholder.com/150" alt="ceci est un placeholder">
+                    <h3>Article 2</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos nulla inventore quos officia eveniet doloribus deleniti! Neque laborum ducimus veniam, nostrum eveniet odit! Ad laborum obcaecati unde dolorem molestias voluptatum.</p>
+                    <div class="articles-buttons">
+                        <button>Lire</button>
+                        <button>33 Commentaires</button>
+                    </div>
+                </article>
+            </div>
         </section>
-        <section id="contact">
+        <section class="contact-section" id="contact">
             <h2>Contact</h2>
-            <form action="">
+            <form>
                 <ul>
                     <li>
                         <label for="name">Nom et Prénom</label>

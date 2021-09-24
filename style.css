@@ -1,0 +1,287 @@
+/***************************/
+/****** My stylesheet ******/
+/***************************/
+
+
+/*** General ***/
+body {
+    padding: 2%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body *{
+    box-sizing: border-box;
+}
+
+
+section {
+    padding: 10%;
+}
+
+h2 {
+    margin-bottom: .8rem;
+    text-align: center;
+}
+
+h3 {
+    margin-bottom: .5rem;
+}
+
+img {
+    border-radius: 3px;
+    width: 100%;
+    height: 25vh;
+    margin: 1em 0;
+}
+
+img:hover {
+    opacity: .5;
+}
+
+button, input[type="submit"] {
+    width: 8rem;
+    padding: .5rem;
+}
+
+button:not(:last-of-type) {
+    margin-right: 1em;
+}
+
+.education-section li, .contact-section li, nav li {
+    list-style: none;
+    line-height: 1.5;
+}
+.education-section ul, .contact-section ul {
+    margin: 2em 0;
+}
+
+.education-section ul, .contact-section ul, nav ul {
+    padding-left: 0;
+}
+
+input, label, textarea {
+    margin: .5em 0;
+}
+
+input, textarea {
+    padding: .5rem;
+}
+
+
+/*** Header ***/
+header h1 {
+    text-align: center;
+}
+
+header img:first-of-type {
+    filter: grayscale(1);
+    width: 100%;
+    height: 100vh;
+}
+
+header p:first-of-type {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    margin-top: 0;
+    color: darkcyan;
+    font-size: 4rem;
+    width: 100%;
+    text-align: center;
+}
+
+/*** Navbar ***/
+
+nav {
+    text-align: center;
+    background-color: #ddd;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-start;
+}
+
+nav li {
+    padding: 1rem;
+}
+
+/*** Projects ***/
+
+.projects-section button {
+    float: right;
+}
+
+/*** Education ***/
+
+.my-informations img {
+    display: block;
+    margin: 2em auto;
+}
+
+.education-section ul {
+    margin: 2em 0;
+}
+
+/*** Contact ***/
+
+
+.contact-section li {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="submit"] {
+    align-self: flex-end;
+}
+
+.contact-section li:last-of-type {
+    margin: .8em 0;
+}
+
+
+/*** Footer ***/
+
+footer {
+    text-align: center;
+    font-size: .8rem;
+    padding: 1em;
+    border-top: 1px solid #333;
+}
+
+/*** Media queries ***/
+    
+@media only screen and (min-width: 600px) {
+    /*** General ***/
+    
+    body {
+        background-color: #333;
+        color: #ddd;
+        padding: 0;
+    }
+
+    section {
+        padding: 5% 10%;
+    }
+
+    h2 {
+        text-align: left;
+    }
+
+    img {
+        border-radius: 3px;
+        width: 150px;
+        height: 150px;
+    }
+    
+
+    /*** Navbar ***/
+
+    nav {
+        background-color: #333;
+    }
+
+    nav a {
+        color: #ddd;
+    }
+    
+    nav ul {
+        display: flex;
+        justify-content: center;
+        padding: .5rem;
+    }
+
+    nav li {
+        padding: 1rem 2rem;
+    }
+
+    nav li:hover {
+        border: 1px red solid;
+    }
+
+    /*** Header ***/
+
+    header img:first-of-type {
+        height: 50vh;
+    }
+
+
+    header p:first-of-type {
+        margin-top: 0;
+        top: 50%;
+    }
+
+    /*** Projects ***/
+
+    .projects-articles {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .projects-articles article {
+        width: 30%;
+    }
+
+    .projects-articles img {
+        width: 100%;
+    }
+
+    .projects-section button {
+        float: none;
+    }
+
+    /*** Education ***/
+
+    .my-informations {
+        display: flex;
+    }
+
+    .my-informations img {
+        margin: 0 3em 0 0;
+    }
+    .my-informations ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+    }
+    
+    .my-informations li {
+        height: 25%;
+    }
+    
+
+    /*** Articles ***/
+
+    .articles-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .articles-container article {
+        width: 45%;
+    }
+
+    .articles-container img {
+        height: 300px;
+        width: 100%;
+    }
+
+    .articles-buttons {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .articles-buttons button {
+        margin-right: 3em;
+    }
+
+
+    /*** Contact ***/
+
+    .contact-section input:not([type="submit"]){
+        width: 30%;
+    }
+
+}
