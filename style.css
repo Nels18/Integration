@@ -247,6 +247,33 @@ footer {
     .my-informations li {
         height: 25%;
     }
+    
+
+    /*** Articles ***/
+
+    .articles-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .articles-container article {
+        width: 45%;
+    }
+
+    .articles-container img {
+        height: 300px;
+        width: 100%;
+    }
+
+    .articles-buttons {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .articles-buttons button {
+        margin-right: 3em;
+    }
+
 
     /*** Contact ***/
 
