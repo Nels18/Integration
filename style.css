@@ -6,6 +6,7 @@
 /*** General ***/
 body {
     padding: 2%;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body *{
@@ -84,9 +85,8 @@ header p:first-of-type {
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
     margin-top: 0;
-
     color: darkcyan;
-    font-size: 2rem;
+    font-size: 4rem;
     width: 100%;
     text-align: center;
 }
