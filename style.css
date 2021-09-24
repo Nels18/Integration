@@ -58,10 +58,6 @@ button:not(:last-of-type) {
     padding-left: 0;
 }
 
-label {
-    display: block;
-}
-
 input, label, textarea {
     margin: .5em 0;
 }
@@ -130,13 +126,20 @@ nav li {
 
 /*** Contact ***/
 
-.contact-section input:not([type="submit"]), .contact-section textarea {
-    width: 100%;
+
+.contact-section li {
+    display: flex;
+    flex-direction: column;
 }
 
 input[type="submit"] {
-    float: right;
+    align-self: flex-end;
 }
+
+.contact-section li:last-of-type {
+    margin: .8em 0;
+}
+
 
 /*** Footer ***/
 
@@ -277,14 +280,8 @@ footer {
 
     /*** Contact ***/
 
-    .contact-section input:not([type="submit"]) {
-        width: 40%;
+    .contact-section input:not([type="submit"]){
+        width: 30%;
     }
-
-    label {
-        display: inline-block;
-        width: 20%;
-    }
-
 
 }
