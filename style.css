@@ -119,7 +119,7 @@ nav li {
 
 /*** Education ***/
 
-.education-section img {
+.my-informations img {
     display: block;
     margin: 2em auto;
 }
@@ -226,6 +226,26 @@ footer {
 
     .projects-section button {
         float: none;
+    }
+
+    /*** Education ***/
+
+    .my-informations {
+        display: flex;
+    }
+
+    .my-informations img {
+        margin: 0 3em 0 0;
+    }
+    .my-informations ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+    }
+    
+    .my-informations li {
+        height: 25%;
     }
 
     /*** Contact ***/
