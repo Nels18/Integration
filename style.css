@@ -76,16 +76,21 @@ img:hover {
   opacity: 0.5;
 }
 
-button,
-input[type="submit"] {
+button {
   width: 10rem;
   padding: 1rem;
+  margin: 1rem 0;
   font-family: var(--main-font);
   font-weight: bold;
   color: var(--tertiary-color);
   border-radius: 5px;
   background-color: transparent;
   border: var(--tertiary-color) solid 3px;
+}
+
+button:hover {
+  background-color: var(--light-tertiary-color);
+  color: var(--light);
 }
 
 button:not(:last-of-type) {
@@ -118,9 +123,17 @@ textarea {
 
 input,
 textarea {
-  padding: 0.5rem;
+  padding: 0.8rem;
   border-radius: 5px;
   border: 1px solid var(--primary-color);
+  font-size: 1rem;
+  font-family: var(--main-font);
+}
+
+input:focus,
+textarea:focus {
+  outline: transparent;
+  background-color: var(--light-primary-color);
 }
 
 /*** Header ***/
@@ -141,6 +154,7 @@ header p:first-of-type {
   transform: translateX(-50%) translateY(-50%);
   margin-top: 0;
   color: var(--secondary-color);
+  font-family: var(--primary-title-font);
   font-size: 4rem;
   width: 100%;
   text-align: center;
@@ -162,12 +176,17 @@ nav li {
   height: 60px;
 }
 
+nav li:hover {
+  border: 1px var(--secondary-color) solid;
+  background-color: var(--light-secondary-color);
+}
+
 nav a {
   text-decoration: none;
 }
 
 nav li:hover a {
-  color: var(--secondary-color);
+  color: var(--dark-tertiary-color);
 }
 
 /*** Projects ***/
@@ -210,7 +229,7 @@ nav li:hover a {
   flex-direction: column;
 }
 
-input[type="submit"] {
+button {
   align-self: flex-end;
 }
 
@@ -240,7 +259,7 @@ color: var(--light); */
   }
 
   section {
-    padding: 5% 20%;
+    padding: 5% 15%;
   }
 
   h2 {
@@ -264,10 +283,6 @@ color: var(--light); */
   nav li {
     width: 10rem;
     padding: 1rem 2rem;
-  }
-
-  nav li:hover {
-    border: 1px var(--secondary-color) solid;
   }
 
   /*** Header ***/
@@ -348,7 +363,7 @@ color: var(--light); */
 
   /*** Contact ***/
 
-  .contact-section input:not([type="submit"]) {
+  .contact-section button {
     width: 30%;
   }
 }
