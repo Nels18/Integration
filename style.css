@@ -14,13 +14,19 @@
   --dark-primary-color: rgb(23, 143, 134);
   --light-primary-color: rgb(202, 244, 241);
   --secondary-color: rgb(69, 173, 58);
-  --dark-secondary-color: rgb(11, 118, 0);
+  --dark-secondary-color: rgb(37, 52, 36);
   --light-secondary-color: rgb(150, 223, 142);
   --tertiary-color: rgb(94, 129, 197);
   --dark-tertiary-color: rgb(17, 43, 95);
   --light-tertiary-color: rgb(133, 162, 220);
   --light: rgb(229, 236, 228);
   --dark: rgb(28, 31, 37);
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
 }
 
 body {
@@ -32,10 +38,6 @@ body {
   min-width: 400px;
 }
 
-body * {
-  box-sizing: border-box;
-}
-
 section {
   padding: 10%;
 }
@@ -44,12 +46,15 @@ h1 {
   margin-bottom: 0;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: var(--secondary-title-font);
   font-weight: normal;
 }
 
-h2, h3 {
+h2,
+h3 {
   color: var(--tertiary-color);
 }
 
@@ -66,23 +71,32 @@ h3 {
   color: var(--light-secondary-color);
 }
 
+p {
+  line-height: 1.5;
+}
+
 a {
   color: var(--dark);
 }
 
-img {
-  width: 100%;
-  margin: 0;
-}
-
-article img {
+.thumb-content,
+.thumbnail {
   border-radius: 10px 10px 0 0;
-  width: 100%;
-  /* height: 25vh; */
 }
 
-article img:hover {
-  opacity: 0.5;
+.thumb-content {
+  overflow: hidden;
+}
+
+.thumbnail {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.thumbnail:hover {
+  transform: scale(1.2);
 }
 
 button {
@@ -158,7 +172,7 @@ article {
   /* box-shadow: hsla(0, 0%, 0%, .3) 5px 5px 10px; */
 }
 
-article > div:first-of-type {
+.article-content {
   padding: 2rem;
 }
 
@@ -194,16 +208,16 @@ header p:first-of-type {
 
 nav {
   text-align: center;
+  border-bottom: var(--light-tertiary-color) 1px solid;
 }
 
 .navbar {
-    position: fixed;
-    width: 100%;
-    background-color: var(--light);
-    opacity: .9;
-    z-index: 10000;
+  position: fixed;
+  width: 100%;
+  background-color: var(--light);
+  /* opacity: 0.9; */
+  z-index: 10000;
 }
-
 
 nav ul {
   display: flex;
@@ -238,12 +252,17 @@ nav li:hover a {
   color: var(--light);
 }
 
-/* .projects-section h2,
-.projects-section h3 {
-  color: var(--light-secondary-color);
-} */
+.projects-section article:nth-child(1) .thumbnail {
+  background-image: url(/image/thumb-project1.jpg);
+}
 
+.projects-section article:nth-child(2) .thumbnail {
+  background-image: url(/image/thumb-project2.jpg);
+}
 
+.projects-section article:nth-child(3) .thumbnail {
+  background-image: url(/image/thumb-project3.jpg);
+}
 /*** Articles ***/
 
 .articles-section {
@@ -254,15 +273,54 @@ nav li:hover a {
   color: var(--light);
 }
 
+.articles-section article:nth-child(1) .thumbnail {
+  background-image: url(/image/thumb-article1.jpg);
+}
+
+.articles-section article:nth-child(2) .thumbnail {
+  background-image: url(/image/thumb-article2.jpg);
+}
+
 /*** Education ***/
 
+.my-informations {
+  background: linear-gradient(
+    var(--light-tertiary-color),
+    var(--light-secondary-color)
+  );
+  padding: 4em;
+  padding-bottom: 200px;
+  margin-bottom: 0;
+  border-radius: 10px;
+}
+
 .my-informations img {
+  width: 80%;
   display: block;
   margin: 2em auto;
+  border-radius: 50%;
+  background: var(--light-primary-color);
+  border: 1px solid #aaa;
 }
 
 .education-section ul {
   margin: 2em 0;
+}
+
+.education-section li {
+  margin-right: 4em;
+}
+
+.education-content {
+  padding: 3em;
+  margin: -200px 2em 2em;
+  border-radius: 10px;
+  background-color: var(--light);
+  border: 1px solid #bbb;
+}
+
+.education-content div:not(:last-of-type) {
+  border-bottom: 2px dotted #bbb;
 }
 
 /*** Contact ***/
@@ -311,11 +369,6 @@ color: var(--light); */
     text-align: left;
   }
 
-  img {
-    width: 150px;
-    height: 150px;
-  }
-
   /*** Navbar ***/
 
   nav ul {
@@ -329,12 +382,7 @@ color: var(--light); */
     height: 60px;
   }
 
-
   /*** Header ***/
-
-  /* header img:first-of-type {
-    height: 50vh;
-  } */
 
   header p:first-of-type {
     margin-top: 0;
@@ -343,37 +391,26 @@ color: var(--light); */
 
   /*** Projects ***/
 
-  .projects-articles img {
-    width: 100%;
-  }
-
   /*** Education ***/
 
-  .my-informations {
-    display: flex;
-  }
-
-  .my-informations img {
-    margin: 0 3em 0 0;
-  }
-
-  .my-informations ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    flex-wrap: wrap;
+  .education-content {
+    margin: -200px 4em 4em;
   }
 
   .my-informations li {
-    height: 25%;
+    height: 3rem;
+  }
+
+  .my-informations img {
+    width: 50%;
   }
 
   /*** Articles ***/
 
-  .articles-container img {
+  /* .articles-container img {
     height: 300px;
     width: 100%;
-  }
+  } */
 
   /*** Contact ***/
 
@@ -388,8 +425,13 @@ color: var(--light); */
 
 /*  */
 @media only screen and (min-width: 768px) {
+  /*** General ***/
 
-  /* Projects */
+  .thumbnail {
+    height: 200px;
+  }
+
+  /*** Projects ***/
 
   .projects-articles {
     display: flex;
@@ -401,8 +443,28 @@ color: var(--light); */
     width: 45%;
   }
 
+  /*** Education ***/
 
-  /* Articles */
+  .my-informations img {
+    margin: 0 4em 0 0;
+    width: 30%;
+    min-width: 260px;
+  }
+
+  .my-informations {
+    display: flex;
+    margin: 4em 0;
+  }
+
+  .my-informations ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: 0;
+  }
+
+  /*** Articles ***/
+
   .articles-container {
     display: flex;
     justify-content: space-between;
@@ -413,35 +475,38 @@ color: var(--light); */
     width: 45%;
   }
 
-  /* Contact */
-  .contact-section input {
-    width: 30%;
-  }
-  
-}
+  /*** Contact ***/
 
+  .contact-section input {
+    width: 50%;
+  }
+}
 
 /*  */
 @media only screen and (min-width: 1200px) {
+  /*** General ***/
 
-  /* General */
   button {
     width: 10rem;
   }
 
-  /* Projects */
-
+  /*** Projects ***/
 
   .projects-articles article {
     width: 30%;
-    
   }
 
-  /* Articles */
+  /*** Articles ***/
+
   .articles-buttons {
     display: flex;
     flex-direction: row;
   }
 
+  /*** Contact ***/
 
+  .contact-section input {
+    width: 30%;
+    min-width: 420px;
+  }
 }
