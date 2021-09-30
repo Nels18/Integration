@@ -339,6 +339,35 @@ nav li:hover a {
   margin: 0.8em 0;
 }
 
+/*** Back to top button ***/
+
+.back-to-top {
+  background: linear-gradient(
+    var(--primary-color),
+    var(--light-secondary-color)
+  );
+  color: var(--dark-tertiary-color);
+  font-size: 2rem;
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  position: fixed;
+  right: 50px;
+  bottom: 40px;
+  text-decoration: none;
+  border-radius: 50%;
+  padding: 1rem;
+  border: var(--primary-color) 2px solid;
+}
+
+.back-to-top span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  animation: slide-up 1s ease-in-out infinite;
+}
+
 /*** Footer ***/
 
 footer {
@@ -347,6 +376,15 @@ footer {
   color: var(--dark);
   padding: 2em;
   background: var(--primary-color);
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(0) translateX(-50%);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-50%);
+  }
 }
 
 /*** Media queries ***/
